@@ -1,0 +1,16 @@
+HG-ET-SEN/
+├── models/
+│   ├── __init__.py
+│   └── hg_et_sen.py         # 核心模型定义 (HG-ET-SEN 类)
+├── layers/
+│   ├── __init__.py
+│   ├── hyperbolic_ops.py    # 双曲几何基础操作 (Möbius加法, 指数/对数映射)
+│   └── hyp_attention.py     # 双曲图注意力层 (Hyperbolic Graph Attention)
+├── utils/
+│   ├── __init__.py
+│   ├── graph_builder.py     # 属性网络流量图构建 (特征归一化, 动态邻接矩阵)
+│   ├── topology_ph.py       # 持久同调 (Vietoris-Rips 过滤, Betti数提取)
+│   └── structural_entropy.py# 可微软聚类与结构熵计算
+├── train.py                 # 训练主循环与损失函数联合优化
+├── eval.py                  # 鲁棒性与泛化能力评估
+└── requirements.txt
